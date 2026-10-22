@@ -9,21 +9,25 @@
 :root{
     --corEscura1: #0b0f14;
     --corEscura2: #394b59;
-    --corEscura3: #a7b4be;
+    --corEscura3: #585272;
     --corEscura4: #1a1a1a;
     --corEscura5: #494947;
+    --corClaro1: #462f41;
+    --corClara2: #7d698c;
+    --corClara3: #d0d9d8;
+    --corClara4: #4c5359;
+    --corClara5: #555e4d;
 }
 #menuLateral{
-    background-color: var(--corEscura2);
     align-items: center;
-    overflow-y: hidden;
     height: 100vh;
     width: 120px;
     border-right: 2px solid var(--corEscura4);
     display: flex;
     flex-flow: column nowrap;
-    position: sticky;
+    position: fixed;
     left: 0;
+    top: 0;
     float: left;
 }
 #btn{
@@ -39,13 +43,14 @@
     cursor: pointer;
 }
 #sesaoCaixa{
+    width: 100vw;
+    float: right;
     gap: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column nowrap;
     overflow-y: hidden;
-    background-color: var(--corEscura3);
 }
 #campoInput{
     display: flex;
@@ -54,10 +59,8 @@
     align-items: center;
     gap: 10px;
     padding: 30px;
-    background-color: var(--corEscura3);
 }
 .cardInput{
-    background-color: var(--corEscura4);
     width: 260px;
     border: 3px solid var(--corEscura2);
     border-radius: 10px;
@@ -73,7 +76,49 @@
     background-color: transparent;
 }
 #caixa{
-    background-color: var(--corEscura5);
+    margin-left: 15px;
+    margin-bottom: 50px;
     width: 300px;
     height: 120px;
+}
+#menssagem{
+    height: 200px;
+    resize: none;
+    font-size: 1.3em;
+    border: none;
+    color: var(--corEscura5);
+}
+#textoDaMenssagem{
+    margin: 5px;
+    background-color: transparent;
+    color: var(--corEscura4);
+}
+#color{
+    background-color: transparent;
+    border: none;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+#voltarCor{
+    padding: 2px;
+    margin-top: 4px;
+    font-family: 'JetBrains Mono';
+    border: 1px solid var(--corEscura1);
+    font-size: 1em;
+}
+.escuro1{
+    background-color: var(--corEscura1);
+}
+.escuro2{
+    background-color: var(--corEscura2);
+}
+.escuro3{
+    background-color: var(--corEscura3);
+}
+.escuro4{
+    background-color: var(--corEscura4);
+}
+.escuro5{
+    background-color: var(--corEscura5);
 }
