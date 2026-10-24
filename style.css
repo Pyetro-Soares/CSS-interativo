@@ -4,31 +4,34 @@
     background-color: var(--corEscura3);
     padding: 0px;
     margin: 0px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
+}
+body.claro{
+    --cor1: #462f41;
+    --cor2: #7d698c;
+    --cor3: #d0d9d8;
+    --cor4: #4c5359;
+    --cor5: #555e4d;
 }
 :root{
-    --corEscura1: #0b0f14;
-    --corEscura2: #394b59;
-    --corEscura3: #585272;
-    --corEscura4: #1a1a1a;
-    --corEscura5: #494947;
-    --corClaro1: #462f41;
-    --corClara2: #7d698c;
-    --corClara3: #d0d9d8;
-    --corClara4: #4c5359;
-    --corClara5: #555e4d;
+    --cor1: #0b0f14;
+    --cor2: #394b59;
+    --cor3: #585272;
+    --cor4: #1a1a1a;
+    --cor5: #494947;
 }
 #menuLateral{
     align-items: center;
     height: 100vh;
     width: 120px;
-    border-right: 2px solid var(--corEscura4);
+    border-right: 2px solid var(--cor4);
     display: flex;
     flex-flow: column nowrap;
     position: fixed;
     left: 0;
     top: 0;
     float: left;
+    background-color: var(--cor2);
 }
 #btn{
     font-family: 'JetBrains Mono';
@@ -43,6 +46,7 @@
     cursor: pointer;
 }
 #sesaoCaixa{
+    background-color: var(--cor3);
     width: 100vw;
     float: right;
     gap: 10px;
@@ -53,6 +57,7 @@
     overflow-y: hidden;
 }
 #campoInput{
+    background-color: var(--cor3);
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -61,13 +66,14 @@
     padding: 30px;
 }
 .cardInput{
+    background-color: var(--cor4);
     width: 260px;
-    border: 3px solid var(--corEscura2);
+    border: 3px solid var(--cor2);
     border-radius: 10px;
     padding: 10px;
 }
 .cardInput>h2{
-    color: var(--corEscura3);
+    color: var(--cor3);
     padding-bottom: 10px;
     font-family: 'Montserrat';
     background-color: transparent;
@@ -76,22 +82,25 @@
     background-color: transparent;
 }
 #caixa{
+    background-color: var(--cor5);
     margin-left: 15px;
     margin-bottom: 50px;
     width: 300px;
     height: 120px;
 }
 #menssagem{
+    background-color: var(--cor4);
     height: 200px;
     resize: none;
     font-size: 1.3em;
     border: none;
-    color: var(--corEscura5);
+    color: var(--cor5);
 }
 #textoDaMenssagem{
-    margin: 5px;
+    width: 285px;
+    margin: 15px;
     background-color: transparent;
-    color: var(--corEscura4);
+    color: var(--cor4);
 }
 #color{
     background-color: transparent;
@@ -104,21 +113,22 @@
     padding: 2px;
     margin-top: 4px;
     font-family: 'JetBrains Mono';
-    border: 1px solid var(--corEscura1);
+    border: 1px solid var(--cor1);
     font-size: 1em;
+    background-color: var(--cor5);
 }
-.escuro1{
-    background-color: var(--corEscura1);
-}
-.escuro2{
-    background-color: var(--corEscura2);
-}
-.escuro3{
-    background-color: var(--corEscura3);
-}
-.escuro4{
-    background-color: var(--corEscura4);
-}
-.escuro5{
-    background-color: var(--corEscura5);
+@media screen and (max-width:630px) {
+    #menuLateral{
+        border-right: none;
+        border-bottom: 3px solid var(--corEscura4);
+        top: 0;
+        float: none;
+        left: 0;
+        height: 55px;
+        width: auto;
+        position: sticky;
+    }
+    .cardInput{
+        width: 230px;
+    }
 }
